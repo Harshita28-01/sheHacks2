@@ -82,7 +82,7 @@ passport.use(
 app.post('/login', function (req, res) {
   const email1 = req.body.email
   const password1 = req.body.password
-
+  console.log(email1);
   User.findOne({ email: email1 }, function (err, foundUser) {
     if (err) {
       console.log(err)
